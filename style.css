@@ -3,6 +3,7 @@ html, body {
     padding: 0;
 }
 
+
 body {
     background-image: url('./images/backgrid.svg');
     background-size: 100px;
@@ -28,9 +29,9 @@ body {
     font-family: 'Quicksand', sans-serif;
     font-weight: 1000;
     color: black;
-    font-size: 25px;
+    font-size: 4vh;
     height: 40px;
-    width: 280px;
+    width: 50vh;
     background-color: white;
     border: 4px solid black;
     border-radius: 10px;
@@ -70,9 +71,8 @@ form {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: black;
-    font-size: 20px;
     height: fit-content;
-    width: 280px;
+    width: 50vh;
     background-color: white;
     border: 4px solid black;
     margin-bottom: 10px;
@@ -126,7 +126,7 @@ form {
     font-family: 'Quicksand', sans-serif;
     font-weight: 1000;
     color: black;
-    font-size: 25px;
+    font-size: 4vh;
     background-color: white;
     margin: 0 0 10px 0;
     text-align: left;
@@ -141,7 +141,19 @@ form {
     border: 4px solid black;
     border-radius: 10px;
     background-color: white;
+}
 
+.news-icon {
+    height: 20px; width: auto;
+    position: relative;
+    top: 10px;
+    left: -6px;
+    transition-duration: 0.5s;
+}
+
+#news-headline:hover .news-icon {
+    transform: translateX(-10px) translateY(-4px) rotateZ(-5deg);
+    overflow: hidden;
 }
 
 .planner, .news {
@@ -155,7 +167,7 @@ form {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: black;
-    font-size: 18px;
+    font-size: 2.7vh;
     background-color: white;
     text-align: left;
     list-style-position: outside;
@@ -175,6 +187,7 @@ form {
     color: white;
     text-decoration: none;
     transition-duration: 0.5s;
+    font-size: 2.4vh;
 }
 
 .nav-item a:hover {
@@ -192,7 +205,7 @@ form {
     font-family: 'Quicksand', sans-serif;
     font-weight: 1000;
     color: white;
-    font-size: 30px;
+    font-size: 5vh;
     position: relative;
 }
 
@@ -206,7 +219,7 @@ form {
     padding: 3px;
     border-radius: 8px;
     background-color: rgb(209, 89, 10);
-    font-size: 12px;
+    font-size: 2vh;
 }
 
 .footer {
@@ -215,7 +228,6 @@ form {
     color: white;
     font-family: 'Quicksand', sans-serif;
     font-weight: 1000;
-    font-size: 14px;
     width: 100%;
     margin-left: 0;
     min-height: 20vh;
@@ -231,7 +243,7 @@ form {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    margin-top: 70px; /* Adjust this value based on your design */
+    margin-top: 12vh; /* Adjust this value based on your design */
     min-height: 68vh;
 }
 
@@ -239,7 +251,7 @@ form {
     margin: auto;
     font-family: 'Quicksand', sans-serif;
     font-weight: 1000;
-    font-size: 14px;
+    font-size: 2.4vh;
     display: inline;
     margin: auto;
     text-decoration: none;
@@ -259,7 +271,7 @@ form {
 .errorno {
     font-family: 'Quicksand', sans-serif;
     font-weight: 1000;
-    font-size: 60px;
+    font-size: 10vh;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -270,7 +282,7 @@ form {
 .errortext {
     font-family: 'Quicksand', sans-serif;
     font-weight: 1000;
-    font-size: 17px;
+    font-size: 3vh;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -282,9 +294,9 @@ form {
     font-family: 'Quicksand', sans-serif;
     font-weight: 1000;
     color: black;
-    font-size: 25px;
+    font-size: 4vh;
     height: 40px;
-    width: 280px;
+    width: 50vh;
     background-color: white;
     border: 4px solid black;
     border-radius: 10px;
@@ -304,4 +316,10 @@ form {
     transform: translateX(40px) translateY(-18px) rotateZ(50deg);
     overflow: hidden;
     opacity: 0;
+}
+
+@media (max-width: 380px) {
+    .nav-item {
+        display: none;
+    }
 }
