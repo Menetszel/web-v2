@@ -116,7 +116,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
     color: var(--text);
-    border: 2px solid var(--text);
+    border: 0.5vh solid var(--text);
     border-radius: 1vh;
     background-color: transparent;
     padding: 10px;
