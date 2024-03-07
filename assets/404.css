@@ -24,6 +24,10 @@ body {
     display: block;
     padding-top: 6vh
     }
+    
+    #title {
+        font-size: 6vh;
+    }
 
     #content {
         width: fit-content;
@@ -113,7 +117,7 @@ body {
     font-weight: bolder;
     color: var(--text);
     border: 2px solid var(--text);
-    border-radius: 5px;
+    border-radius: 1vh;
     background-color: transparent;
     padding: 10px;
     position: relative;
