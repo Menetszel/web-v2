@@ -1,0 +1,128 @@
+:root {
+    --secondary: #30262a;
+    --text: white;
+    --highlight: #002f32;
+}
+
+body {
+    background-image: url(photos/tracks.png);
+    background-repeat: none;
+    background-size: cover;
+}
+
+@media (max-width: 150vh) {
+    body {
+        background-size: auto 130vh;
+        background-position: center;
+    }
+
+    #errorno {
+    font-size: 15vh;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    display: block;
+    padding-top: 6vh
+    }
+
+    #content {
+        width: fit-content;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #desc {
+    font-size: 5vh;
+    padding-left: 10vh; padding-right: 10vh;
+    }
+
+    #back {
+        font-size: 3vh;
+        position: relative;
+        margin: auto;
+        width: 42vh;
+    }
+}
+
+
+@media (min-width: 150vh) {
+#errorno {
+    
+    font-size: 15vw;
+    width: 30vw;
+    left: 5vw;
+    top: 3vh;
+    transform: rotate(270deg);
+    position: absolute;
+}
+
+#title {
+    width: 30vw;
+}
+
+#desc {
+    width: 30vw;
+}
+
+#content {
+    position: absolute;
+    left: 65vw;
+    top: 20vh;
+}
+
+}
+
+
+#credits {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+    text-shadow: var(--secondary) 0.5vw 0 2vw;
+    font-size: 10px;
+    right: 5px;
+    bottom: 5px;
+    position: absolute;
+}
+
+#title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    position: relative;
+    color: var(--text);
+    text-shadow: var(--secondary) 0.5vw 0 2vw;
+    display: block;
+}
+
+#desc {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    position: relative;
+    color: var(--text);
+    text-shadow: var(--secondary) 0.5vw 0 2vw;
+    display:block;
+}
+
+#errorno {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: var(--text);
+    text-shadow: var(--secondary) 0.5vw 0 2vw;
+}
+
+#back {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: var(--text);
+    border: 2px solid var(--text);
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 10px;
+    position: relative;
+    transition-duration: 0.5s;
+}
+
+#back:hover {
+    background-color: var(--text);
+    color: var(--highlight);
+    box-shadow: var(--secondary) 0.5vw 0 2vw;
+}
+

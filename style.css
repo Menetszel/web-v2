@@ -24,7 +24,6 @@ body {
     top: 10px;
 }
 
-
 .letsgo {
     font-family: 'Quicksand', sans-serif;
     font-weight: 1000;
@@ -122,7 +121,7 @@ form {
     border-left: none; border-right: none; border-bottom: none;
 }
 
-#news-headline {
+.news-headline {
     font-family: 'Quicksand', sans-serif;
     font-weight: 1000;
     color: black;
@@ -143,6 +142,10 @@ form {
     background-color: white;
 }
 
+.news a {
+    text-decoration: none; color: black;
+}
+
 .news-icon {
     height: 20px; width: auto;
     position: relative;
@@ -151,12 +154,12 @@ form {
     transition-duration: 0.5s;
 }
 
-#news-headline:hover .news-icon {
+.news-headline:hover .news-icon {
     transform: translateX(-10px) translateY(-4px) rotateZ(-5deg);
     overflow: hidden;
 }
 
-.planner, .news {
+.planner, .news, .article {
     display: block;
     position: relative;
     margin-left: auto; margin-right: auto;
@@ -322,4 +325,38 @@ form {
     .nav-item {
         display: none;
     }
+}
+
+.article a {
+    text-decoration: none; color: black;
+}
+
+.article-headline {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 1000;
+    color: black;
+    font-size: 4vh;
+    background-color: white;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+.article {
+    display: block;
+    margin-top: 0;
+    position: relative;
+    width: 320px;
+    height: 100%;
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 7.5px; margin-bottom: 7.5px;
+}
+
+.article p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 2.7vh;
+    margin: 0;
 }
