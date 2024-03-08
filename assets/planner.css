@@ -3,6 +3,8 @@
     --secondary: #30262a;
     --primary: white;
     --highlight: #002f32;
+    --logo1: #007B42;
+    --logo2: #BE6E46;
 }
 
 * {
@@ -223,6 +225,7 @@ form {
     margin: auto;
     z-index: 4;
     display: inline;
+    
 }
 
 .title {
@@ -231,6 +234,7 @@ form {
     color: white;
     font-size: 5vh;
     position: relative;
+    top: -0.7vh;
 }
 
 .badge {
@@ -244,6 +248,8 @@ form {
     border-radius: 8px;
     background-color: rgb(209, 89, 10);
     font-size: 2vh;
+    position: relative;
+    top: -0.6vh;
 }
 
 .footer {
