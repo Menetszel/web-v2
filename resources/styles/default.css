@@ -89,3 +89,9 @@
     rotate: 20deg;
     filter:brightness(1.2)
 }
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
