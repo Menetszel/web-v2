@@ -1,0 +1,91 @@
+:root {
+    --primary: white;
+    --secondary: black;
+    --blue1: #0854bc;
+    --blue2: #064296;
+    --red1: #c52020;
+    --red2: #750000;
+}
+
+
+.transport{
+    border-radius: 1.5vh;
+    width: 45vh;
+    margin: auto;
+    position: relative;
+    box-shadow: 0px 0px 1vh 0.001vh #3b3b3b;
+}
+
+.t_head {
+    border-radius: 1.5vh;
+    box-shadow: 0px 0px 1vh 0.001vh #3b3b3b;
+    background-image: linear-gradient(to right, var(--blue1), var(--blue2));
+    color: var(--primary);
+    font-family: Montserrat, san-serif;
+    height: fit-content;
+    width: 100%;
+    padding-top: 0.8vh; padding-bottom: 0.8vh;
+    display: inline-flex;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.transport .t_head .t_name, .t_head .t_type, .transport .material-symbols-outlined  {
+    margin: 0.5vh;
+}
+
+.transport .t_head .material-symbols-outlined {
+    padding-left: 1vh;
+}
+
+.transport .t_body .material-symbols-outlined {
+    padding-right: 1vh;
+}
+
+.transport .t_head .t_name, .transport .t_head .t_type {
+    font-size: 3.1vh;
+}
+
+.transport .t_body {
+    padding-top: 2vh;
+    padding-left: 1vh; padding-right: 1vh; padding-bottom: 1vh;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: Work Sans, sans-serif;
+}
+
+.transport .t_body .t_details {
+    display: inline-flex;
+    flex-direction: row;
+    margin-bottom: 1vh;
+}
+
+.transport .t_body .t_details_sub {
+    margin-left: 1.5vh;
+}
+
+.transport .t_buyticket {
+    display: inline-flex;
+    background-color: var(--red1);
+    font-family: Montserrat, sans-serif;
+    border: none;
+    color: var(--primary);
+    position: relative;
+    padding: 1vh;
+    margin: 1vh;
+    float: right;
+    border-radius: 100vh;
+    transition-duration: 0.3s;
+}
+
+.transport .t_buyticket:hover {
+    rotate: 20deg;
+    filter:brightness(1.2)
+}
