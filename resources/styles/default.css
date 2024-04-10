@@ -28,6 +28,7 @@
     display: inline-flex;
 }
 
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -42,10 +43,12 @@
 
 .transport .t_head .material-symbols-outlined {
     padding-left: 1vh;
+    font-size: 4vh;
 }
 
 .transport .t_body .material-symbols-outlined {
     padding-right: 1vh;
+    font-size: 4vh
 }
 
 .transport .t_head .t_name, .transport .t_head .t_type {
