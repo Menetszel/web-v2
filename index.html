@@ -12,29 +12,62 @@
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="transport">
+        <div class="transport vbusz">
             <div class="t_head">
-                <span class="material-symbols-outlined">directions_railway</span>
-                <div class="t_name">S10</div>
-                <div class="t_type">személy</div>
+                <span class="material-symbols-outlined">directions_bus</span>
+                <div class="t_name">7071</div>
+                <div class="t_type">autóbusz</div>
             </div>
             <div class="t_body">
-                <div class="t_details">
-                    <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined">
                         pin_drop
-                    </span>
+                </span>
+                <div class="t_details">
                     <div class="t_details_sub">
-                        <div class="t_start">Budapest-Déli</div>
-                        <div class="t_end">Győr</div>
+                        <div class="t_start">9:35</div>
+                        <div class="t_start">Kapuvár, autóbusz-állomás</div>
                     </div>
                     <div class="t_details_sub">
-                        <div class="t_start">10:25</div>
-                        <div class="t_end">12:19</div>
+                        <div class="t_end">10:47</div>
+                        <div class="t_end">Győr, autóbusz-állomás</div>
+                    </div>
+                </div>
+                </div>
+                <div class="clearfix"><button class="t_buyticket" onclick="window.location.href='https://mobiljegy.nmzrt.hu/'">
+                    <span class="material-symbols-outlined">shopping_cart</span><div class="t_buyticket_text">Jegyvásárlás</div>
+                </button></div>
+        </div>
+        <div class="transfer">
+            <span class="material-symbols-outlined">directions_walk</span>
+            <div class="tr_body">
+                <div class="tr_head">Átszállás</div>
+                <div class="tr_details">Állomások között</div>
+                <div class="tr_details">13 perc átszállási idő, ebből 4 perc gyaloglás.</div>
+            </div>
+        </div>
+        <div class="transport mav">
+            <div class="t_head mav">
+                <span class="material-symbols-outlined">directions_railway</span>
+                <div class="t_name">S10</div>
+                <div class="t_type">személyvonat</div>
+            </div>
+            <div class="t_body">
+                <span class="material-symbols-outlined">
+                        pin_drop
+                </span>
+                <div class="t_details">
+                    <div class="t_details_sub">
+                        <div class="t_start place">11:38</div>
+                        <div class="t_start time">Győr</div>
+                    </div>
+                    <div class="t_details_sub">
+                        <div class="t_end place">13:34</div>
+                        <div class="t_end time">Budapest-Déli</div>
                     </div>
                 </div>
                 </div>
                 <div class="clearfix"><button class="t_buyticket" onclick="window.location.href='https://jegy.mav.hu'">
-                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span class="material-symbols-outlined">shopping_cart</span><div class="t_buyticket_text">Jegyvásárlás</div>
                 </button></div>
         </div>
     </body>
