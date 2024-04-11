@@ -179,3 +179,7 @@
     font-size: 2vh;
     font-family: Work Sans;
 }
+
+.transfer .tr_body .tr_important {
+    font-style: italic;
+}
