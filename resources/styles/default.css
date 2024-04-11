@@ -108,6 +108,11 @@
     width: 7vh
 }
 
+.transport .t_buyticket .material-symbols-outlined {
+    font-size: 4vh;
+
+}
+
 .transport .t_buyticket .t_buyticket_text {
     font-size: 2.5vh;
     padding-top: 0.8vh;
