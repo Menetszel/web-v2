@@ -72,13 +72,15 @@
     flex-direction: row;
     width: 100%;
     font-family: Work Sans, sans-serif;
+    word-wrap: break-word;
 }
 
 .transport .t_body .t_details {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    margin-bottom: 1vh;
-    font-size: 2.5vh;
+    margin-bottom: 1vh; margin-right: 1vh;
+    font-size: 2.4vh;
+    word-wrap: break-word;
 }
 
 .transport .t_body .t_details_sub {
