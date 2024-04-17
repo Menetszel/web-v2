@@ -244,3 +244,44 @@ body {
     border-radius: 1vh;
     font-family: Work Sans;
 }
+
+@media(max-width: 70vh) {
+    #navbar {
+        flex-direction: column;
+        width: 100%;
+        height: 5vh;
+        align-items: center;
+    }
+}
+
+@media(min-width: 70vh) {
+    #navbar {
+        flex-direction: row;
+        width: 5vh;
+        height: 100%;
+        
+    }
+}
+
+#navbar {
+    background-color: var(--blue1);
+    display: flex;
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 1vh;
+    font-family: Montserrat, sans-serif;
+    box-shadow: 0px 0px 1vh 0.001vh #3b3b3b;
+    position: fixed;
+    z-index: 100;
+    
+}
+
+#navbar .nav_item {
+    list-style: none;
+    color: white;
+}
+
+#navbar .nav_item a {
+    color: inherit
+}
