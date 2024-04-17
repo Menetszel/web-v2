@@ -13,6 +13,11 @@
     --greenblack: #2c122e;
 }
 
+body {
+    overflow: auto;
+}
+
+
 .transport{
     border-radius: 1.5vh;
     max-width: 50vh;
@@ -75,10 +80,9 @@
 
 .transport .t_body {
     padding-top: 2vh;
-    padding-left: 1vh; padding-right: 1vh; padding-bottom: 1vh;
+    padding-left: 1vh; padding-bottom: 1vh;
     display: inline-flex;
     flex-direction: row;
-    width: 100%;
     font-family: Work Sans, sans-serif;
     word-wrap: break-word;
 }
@@ -86,7 +90,7 @@
 .transport .t_body .t_details {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1vh; margin-right: 1vh;
+    margin-bottom: 1vh; padding-right: 1vh;
     font-size: 2.4vh;
     word-wrap: break-word;
 }
@@ -113,7 +117,8 @@
     font-size: 4vh;
     border-top-left-radius: 1.5vh;
     transition-duration: 0.5s;
-    width: 7vh
+    width: 7vh;
+    overflow: hidden;
 }
 
 .transport .t_buyticket_disabled {
@@ -132,6 +137,7 @@
     transition-duration: 0.5s;
     width: 7vh;
     filter: saturate(0.5) brightness(1.6);
+    overflow: hidden;
 }
 
 .transport .t_buyticket_disabled .t_buyticket_text {
@@ -142,6 +148,10 @@
     display: none;
 }
 
+.transport .t_buyticket_disabled .material-symbols-outlined {
+    font-size: 4vh;
+}
+
 .transport .t_buyticket .material-symbols-outlined {
     font-size: 4vh;
 
@@ -150,6 +160,9 @@
 .transport .t_buyticket .t_buyticket_text {
     font-size: 2.5vh;
     padding-top: 0.8vh;
+    width: 0;
+    margin-right: 0;
+    padding-right: 0;
     opacity: 0;
     transition-duration: 0.5s;
 }
@@ -180,7 +193,7 @@
 }
 
 .transfer {
-    max-width: 50vh;
+    max-width: 40vh;
     min-height: 10vh;
     margin: auto;
     padding-left: 5vh;
@@ -196,6 +209,7 @@
     margin: auto;
     position: relative;
     padding-left: 2vh;
+    padding-right: 2vh;
     margin-left: 2vh;
 }
 
