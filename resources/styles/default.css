@@ -49,7 +49,7 @@ body {
 
 .transport.m4 .t_head {
     background-image: linear-gradient(to right, var(--green1), var(--green2));
-    color: var(--greenblack);
+    color: var(--greenwhite);
 }
 
 .material-symbols-outlined {
