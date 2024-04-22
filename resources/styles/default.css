@@ -245,23 +245,24 @@ body {
     font-family: Work Sans;
 }
 
-@media(max-width: 70vh) {
-    #navbar {
-        flex-direction: column;
+#navbar {
+        flex-direction: row;
         width: 100%;
-        height: 5vh;
+        height: auto;
+        padding-top: 0.8vh; padding-bottom: 0.8vh;
+        padding-left: 1.8vh;
         align-items: center;
+        overflow: hidden;
     }
+
+    #navbar .nav_item .material-symbols-outlined {
+        font-size: 7vh;
+    }
+
+@media(max-width: 70vh) {
+    
 }
 
-@media(min-width: 70vh) {
-    #navbar {
-        flex-direction: row;
-        width: 5vh;
-        height: 100%;
-        
-    }
-}
 
 #navbar {
     background-color: var(--blue1);
@@ -269,19 +270,31 @@ body {
     margin: 0;
     top: 0;
     left: 0;
-    padding: 1vh;
     font-family: Montserrat, sans-serif;
     box-shadow: 0px 0px 1vh 0.001vh #3b3b3b;
     position: fixed;
     z-index: 100;
-    
 }
 
 #navbar .nav_item {
     list-style: none;
     color: white;
+    position: relative;
 }
 
 #navbar .nav_item a {
     color: inherit
+}
+
+@keyframes menuHidden {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+}
+
+#menubutton {
+    transition-duration: 0.5s;
 }
