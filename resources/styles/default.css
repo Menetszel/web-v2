@@ -265,7 +265,7 @@ body {
 
 
 #navbar {
-    background-color: var(--blue1);
+    background-color: var(--secondary);
     display: flex;
     margin: 0;
     top: 0;
@@ -292,6 +292,7 @@ body {
     }
     100% {
       transform: translateY(100%);
+      opacity: 0;
     }
 }
 
