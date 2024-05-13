@@ -11,236 +11,163 @@
     --green1: #00693e;
     --green2: #005c36;
     --greenblack: #2c122e;
+    --inactive: #868686;    
 }
 
 body {
     overflow: auto;
+    padding: none;
+    margin: none;
 }
 
+.transport {
+    display: grid;
+    grid-template-columns: 10vh auto auto;
+    grid-template-rows: auto 7vh auto auto auto;
+  }
 
-.transport{
-    border-radius: 1.5vh;
-    max-width: 50vh;
-    margin: auto;
+.transportLineSolid {
+    grid-column: 1;
+    z-index: 1;
+    display: block;
+    border-left: solid 0.6vh black;
     position: relative;
-    box-shadow: 0px 0px 1vh 0.001vh #3b3b3b;
-    margin-bottom: 2vh; margin-top: 2vh;
+    margin: 0 auto;
+    padding: 0;
 }
 
-.t_head {
-    border-radius: 1.5vh;
-    box-shadow: 0px 0px 1vh 0.001vh #3b3b3b;
-    font-family: Montserrat, san-serif;
-    height: fit-content;
-    width: 100%;
-    padding-top: 0.8vh; padding-bottom: 0.8vh;
-    display: inline-flex;
+
+
+
+.transportFrom, .transportTo {
+    display: flex;
+    flex-direction: row;
 }
 
-.transport.mav .t_head {
-    background-image: linear-gradient(to right, var(--blue1), var(--blue2));
+.transportHead {
+    grid-column: 1;
+    grid-row: 1;
+    width: 6vh;
+    height: 6vh;
+    background-color: black;
+    margin-left: auto; margin-right: auto;
+    border-radius: 1.3vh;
     color: white;
+    z-index: 3;
+    display: flex;
+    overflow: hidden;
+    
 }
 
-.transport.volan .t_head {
-    background-image: linear-gradient(to right, var(--yellow1), var(--yellow2));
-    color: var(--yellowblack);
+.transportHead img {
+    width: 3.4vh;
+    height: auto;
+    position: relative;
+    display: block;
+    margin: auto;
+    justify-self: center;
 }
 
-.transport.m4 .t_head {
-    background-image: linear-gradient(to right, var(--green1), var(--green2));
-    color: white;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 300,
-  'GRAD' 0,
-  'opsz' 24
-}
-
-.transport .t_head .t_name, .t_head .t_type, .transport .material-symbols-outlined  {
-    margin: 0.5vh;
-}
-
-.transport .t_head .material-symbols-outlined {
-    padding-left: 1vh;
-    font-size: 4vh;
-}
-
-.transport .t_body .material-symbols-outlined {
-    padding-right: 1vh;
-    font-size: 4vh
-}
-
-.transport .t_head .t_name, .transport .t_head .t_type {
+.transportName {
+    font-family: Montserrat;
+    font-weight: 600;
+    margin-top: -0.1vh;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
     font-size: 3.1vh;
 }
 
-.transport .t_body {
-    padding-top: 2vh;
-    padding-left: 1vh; padding-bottom: 1vh;
-    display: inline-flex;
-    flex-direction: row;
-    font-family: Work Sans, sans-serif;
-    word-wrap: break-word;
-}
-
-.transport .t_body .t_details {
+.transportDetails {
+    grid-column: 2;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1vh; padding-right: 1vh;
-    font-size: 2.4vh;
-    word-wrap: break-word;
-}
-
-.transport .t_body .t_details_sub {
-    margin-left: 1.5vh;
-}
-
-.transport .t_body .t_details_sub .t_start, .transport .t_body .t_details_sub .t_end {
-    display: inline;
-}
-
-.transport .t_buyticket {
-    display: inline-flex;
-    background-color: var(--red1);
-    font-family: Montserrat, sans-serif;
-    border: none;
-    color: var(--primary);
-    position: relative;
-    padding: 1vh;
-    float: right;
-    border-bottom-right-radius: 1.5vh;
-    transition-duration: 0.3s;
-    font-size: 4vh;
-    border-top-left-radius: 1.5vh;
-    transition-duration: 0.5s;
-    width: 7vh;
-    overflow: hidden;
-}
-
-.transport .t_buyticket_disabled {
-    display: inline-flex;
-    background-color: var(--red1);
-    font-family: Montserrat, sans-serif;
-    border: none;
-    color: var(--primary);
-    position: relative;
-    padding: 1vh;
-    float: right;
-    border-bottom-right-radius: 1.5vh;
-    transition-duration: 0.3s;
-    font-size: 4vh;
-    border-top-left-radius: 1.5vh;
-    transition-duration: 0.5s;
-    width: 7vh;
-    filter: saturate(0.5) brightness(1.6);
-    overflow: hidden;
-}
-
-.transport .t_buyticket_disabled .t_buyticket_text {
-    font-size: 2.5vh;
-    padding-top: 0.8vh;
-    opacity: 0;
-    transition-duration: 0.5s;
-    display: none;
-}
-
-.transport .t_buyticket_disabled .material-symbols-outlined {
-    font-size: 4vh;
-}
-
-.transport .t_buyticket .material-symbols-outlined {
-    font-size: 4vh;
-
-}
-
-.transport .t_buyticket .t_buyticket_text {
-    font-size: 2.5vh;
-    padding-top: 0.8vh;
-    width: 0;
-    margin-right: 0;
-    padding-right: 0;
-    opacity: 0;
-    transition-duration: 0.5s;
-}
-
-@keyframes slideInFromRight {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-}
-
-.transport .t_buyticket:hover {
-    filter:brightness(1.2);
-    width: 23vh;
-}
-
-.transport .t_buyticket:hover .t_buyticket_text {
-    animation: slideInFromRight 0.5s forwards;
-    opacity: 1;
-}
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.transfer {
-    max-width: 40vh;
-    min-height: 10vh;
-    margin: auto;
-    padding-left: 5vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.transfer .tr_body {
-    border-left: dashed 0.5vh;
-    max-width: 48vh;
-    min-height: 10vh;
-    margin: auto;
-    position: relative;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    margin-left: 2vh;
-}
-
-.transfer .material-symbols-outlined {
-    font-size: 5vh;
-}
-
-.transfer .tr_body .tr_head {
-    font-size: 3vh;
-    font-family: Work Sans;
-}
-
-.transfer .tr_body .tr_details {
-    font-size: 2vh;
-    font-family: Work Sans;
-}
-
-.transfer .tr_body .tr_important {
+    justify-content: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: -0.37vh;
+    padding-top: 0;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 2.1vh;
     font-style: italic;
 }
 
-.transport .t_body .t_details_sub .info {
-    font-style: italic;
+.transportHeader {
+    padding: 0;
+    margin: 0;
 }
 
-.transport .warning {
-    display: inline-flex;
-    position: relative;
-    background-image: linear-gradient(to right, var(--red1), var(--red2));
-    color: white;
-    padding: 0.5vh;
+.transportDot {
+    grid-column: 1;
+    z-index: 3;
+    border: 0.7vh solid black;
     border-radius: 1vh;
-    font-family: Work Sans;
+    background-color: white;
+    width: 0.5vh;
+    height: 0.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+}
+
+.a {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.transportLineBrokenDotting {
+    width: 0.7vh;
+    height: 0.7vh;
+    border-radius: 1vh;
+    background-color: black;
+    margin: auto;
+    position: relative;
+}
+
+.transportLineBroken {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; margin-right: auto;
+    height: 100%;
+}
+
+.transportLineBroken :first-child {
+    width: 1vh;
+    height: 1vh;
+}
+
+.transportLineSolid.a {
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    height: auto;
+}
+
+.transportLineSolid.xa {
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    height: 50%;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.b {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+
+
+.c {
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.transportLineSolid.c {
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    height: 50%;
 }

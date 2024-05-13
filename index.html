@@ -14,86 +14,37 @@
         <!-- <script src="/resources/scripts/planner.js" type="module"></script> -->
     </head>
     <body>
-        <div class="transport volan">
-            <div class="t_head">
-                <span class="material-symbols-outlined">directions_bus</span>
-                <div class="t_name">7071</div>
-                <div class="t_type">autóbusz</div>
+        <div class="route"></div>
+        <div class="transport m4">
+                <div class="transportLineSolid xa"></div>
+                <div class="transportHead"><img src="/resources/images/bkk-metro-white.svg"></div>
+                <div class="transportHeader">
+                <div class="transportName">M4 metró</div>
+                <div class="transportDetails">Kelenföld felé</div>
+                </div>
+                <div class="transportStatus">
+                    <div class="transportUntil">3 perc múlva</div>
+                    <div class="transportDelay">Pontos</div>
+                </div>
+                <div class="transportLineSolid a"></div>
+                <div class="transportDot a"></div>
+                <div class="transportPlace from">Kálvin tér</div>
+                <div class="transportTime from">12:12</div>
+                <div class="transportLineBroken b">
+                    <div class="transportLineBrokenDotting"></div>
+                    <div class="transportLineBrokenDotting"></div>
+                </div>
+                <div class="transportDuration">2 megálló, 5 perc</div>
+                <div class="transportLineSolid c"></div>
+                <div class="transportDot c"></div>
+                <div class="transportPlace to">Keleti Pályaudvar</div>  
+                <div class="transportTime to">12:24</div>
+                    
+                    
+                
             </div>
-            <div class="t_body">
-                <span class="material-symbols-outlined">
-                        pin_drop
-                </span>
-                <div class="t_details">
-                    <div class="t_details_sub">
-                        <div class="t_start">9:35</div>
-                        <div class="t_start">Kapuvár, autóbusz-állomás</div>
-                    </div>
-                    <div class="t_details_sub">
-                        <div class="t_end">10:47</div>
-                        <div class="t_end">Győr, autóbusz-állomás</div>
-                    </div>
-                </div>
-                </div>
-                <div class="clearfix"><button class="t_buyticket" onclick="window.location.href='https://mobiljegy.nmzrt.hu/'">
-                    <span class="material-symbols-outlined">shopping_cart</span><div class="t_buyticket_text">Jegyvásárlás</div>
-                </button></div>
         </div>
         <div class="transfer">
-            <span class="material-symbols-outlined">directions_walk</span>
-            <div class="tr_body">
-                <div class="tr_head">Átszállás</div>
-                <div class="tr_details tr_important">Állomások között.</div>
-                <div class="tr_details">51 perc átszállási idő, ebből 4 perc gyaloglás.</div>
-            </div>
-        </div>
-        <div class="transport mav">
-            <div class="t_head">
-                <span class="material-symbols-outlined">directions_railway</span>
-                <div class="t_name">S10</div>
-                <div class="t_type">személyvonat</div>
-            </div>
-            <div class="t_body">
-                <span class="material-symbols-outlined">
-                        pin_drop
-                </span>
-                <div class="t_details">
-                    <div class="t_details_sub">
-                        <div class="t_start place">11:38</div>
-                        <div class="t_start time">Győr</div>
-                    </div>
-                    <div class="t_details_sub">
-                        <div class="t_end place">13:34</div>
-                        <div class="t_end time">Budapest-Déli</div>
-                    </div>
-                </div>
-                </div>
-                <div class="clearfix"><button class="t_buyticket" onclick="window.location.href='https://jegy.mav.hu'">
-                    <span class="material-symbols-outlined">shopping_cart</span><div class="t_buyticket_text">Jegyvásárlás</div>
-                </button></div>
-        </div>
-        <div class="transport m4">
-            <div class="t_head">
-                <span class="material-symbols-outlined">directions_subway</span>
-                <div class="t_name">M4</div>
-                <div class="t_type">metró</div>
-            </div>
-            <div class="t_body">
-                <span class="material-symbols-outlined">
-                        pin_drop
-                </span>
-                <div class="t_details">
-                    <div class="t_details_sub">
-                        <div class="t_start">Budapest-Kelenföld</div>
-                        <div class="t_end">Budapest Keleti</div>
-                        <div class="info">13 perc, 5 percenként közlekedik.</div>
-                    </div>
-                </div>
-                </div>
-                <div class="clearfix"><button class="t_buyticket_disabled" onclick="window.location.href='https://bkk.hu'" disabled>
-                    <span class="material-symbols-outlined">shopping_cart</span><div class="t_buyticket_text">Jegyvásárlás</div>
-                </button>
-            </div>
         </div>
     </body>
 </html>
