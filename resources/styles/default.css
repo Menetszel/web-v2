@@ -23,151 +23,126 @@ body {
 .transport {
     display: grid;
     grid-template-columns: 10vh auto auto;
-    grid-template-rows: auto 7vh auto auto auto;
+    grid-template-rows: auto 7vh auto 7vh;
   }
 
-.transportLineSolid {
-    grid-column: 1;
-    z-index: 1;
-    display: block;
-    border-left: solid 0.6vh black;
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
-}
-
-
-
-
-.transportFrom, .transportTo {
-    display: flex;
-    flex-direction: row;
-}
 
 .transportHead {
     grid-column: 1;
     grid-row: 1;
-    width: 6vh;
-    height: 6vh;
+    height: 7vh;
+    width: 7vh;
     background-color: black;
-    margin-left: auto; margin-right: auto;
-    border-radius: 1.3vh;
-    color: white;
-    z-index: 3;
+    border-radius: 1.2vh;
+    justify-content: center;
+    align-items: center;
     display: flex;
-    overflow: hidden;
-    
-}
-
-.transportHead img {
-    width: 3.4vh;
-    height: auto;
-    position: relative;
-    display: block;
-    margin: auto;
+    align-self: center;
     justify-self: center;
 }
 
-.transportName {
-    font-family: Montserrat;
-    font-weight: 600;
-    margin-top: -0.1vh;
-    padding-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font-size: 3.1vh;
-}
-
-.transportDetails {
-    grid-column: 2;
-    grid-row: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    margin-top: -0.37vh;
-    padding-top: 0;
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 2.1vh;
-    font-style: italic;
-}
-
-.transportHeader {
-    padding: 0;
-    margin: 0;
-}
-
-.transportDot {
-    grid-column: 1;
-    z-index: 3;
-    border: 0.7vh solid black;
-    border-radius: 1vh;
-    background-color: white;
-    width: 0.5vh;
-    height: 0.5vh;
-    margin-left: auto;
-    margin-right: auto;
-    align-self: center;
-}
-
-.a {
-    grid-row: 2;
-    grid-column: 1;
-}
-
-.transportLineBrokenDotting {
-    width: 0.7vh;
-    height: 0.7vh;
-    border-radius: 1vh;
-    background-color: black;
-    margin: auto;
-    position: relative;
-}
-
-.transportLineBroken {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto; margin-right: auto;
-    height: 100%;
-}
-
-.transportLineBroken :first-child {
-    width: 1vh;
-    height: 1vh;
-}
-
-.transportLineSolid.a {
-    border-bottom-left-radius: 1vh;
-    border-bottom-right-radius: 1vh;
+.transportHead .transportIcon {
+    width: 60%;
     height: auto;
 }
 
-.transportLineSolid.xa {
-    border-bottom-left-radius: 1vh;
-    border-bottom-right-radius: 1vh;
-    height: 50%;
-    grid-row: 1;
+.transport * {
+    font-family: Montserrat;
+    color: var(--secondary)
+}
+
+.transportHeader {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.transportName {
+    font-weight: 700;
+    font-size: 4.5vh;
+}
+
+.transportDetails {
+    font-size: 2.8vh;
+    font-style: italic;
+}
+
+.transportStatus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.onTime * {
+    color: var(--green1);
+
+}
+
+.transportTime, .transportPlace {
+    align-self: center;
+}
+
+.transportTime, .transportPlace, .transportDuration, .transportMore {
+    font-size: 3vh;
+    margin-right: 1vh;
+}
+
+.transportStatus * {
+    margin-right: 0.8vh;
+}
+
+.transportUntilIcon {
+    font-size: 4.2vh !important;
+    padding-top: 0.01vh;
+}
+
+.xa {
     grid-column: 1;
+    grid-row: 1;
+}
+
+.a {
+    grid-column: 1;
+    grid-row: 2;
 }
 
 .b {
-    grid-row: 3;
     grid-column: 1;
+    grid-row: 3;
 }
-
-
 
 .c {
-    grid-row: 4;
     grid-column: 1;
+    grid-row: 4;
 }
 
-.transportLineSolid.c {
-    border-top-left-radius: 1vh;
-    border-top-right-radius: 1vh;
-    height: 50%;
+.transportLineSolid {
+    height: auto;
+    width: 0.5vh;
+    background-color: black;
+    justify-self: center;
+    display: flex;
+    position: relative;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    border: none 0px;
+}
+
+.transportLineDotted {
+    height: auto;
+    justify-self: center;
+}
+
+.transportDot {
+    height: 0.7vh;
+    width: 0.7vh;
+    border-radius: 50%;
+    border: 0.6vh black solid;
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    position: relative;
 }
